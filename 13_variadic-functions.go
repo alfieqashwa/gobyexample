@@ -1,3 +1,15 @@
+/*
+Variadic Function == pembuatan fungsi dengan parameter sejenis yang tak terbatas.
+Maksudnya tak terbatas disini adalah jumlah parameter yang disisipkan ketika pemanggilan fungsi bisa berapa saja.
+
+Parameter variadic memiliki sifat yang mirip dengan slice. Nilai dari parameter-parameter yang disisipkan bertipe data sama,
+dan ditampung oleh sebuah variable saja.
+Cara pengaksesan tiap datanya juga sama, dengan menggunakan index.
+
+Deklarasi parameter variadic sama dengan cara deklarasi variabel biasa, pembedanya adalah pada parameter jenis ini ditambahkan tanda titik tiga kali ( ... ) tepat setelah penulisan variable (sebelum tipe data).
+Nantinya semua nilai yang disisipkan sebagai parameter akan ditampung oleh variable tersebut.
+*/
+
 /*Variadic functions can be called with any number of trailing arguments.
 For example, fmt.Println is a common variadic function. */
 package main
