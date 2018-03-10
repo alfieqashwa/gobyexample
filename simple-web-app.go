@@ -6,15 +6,17 @@ import (
 )
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Whoa, Go is Cello's toy!")
+	fmt.Fprintf(w, `<h1>Whoa, Go is Cello's toy!</h1>
+<p>Go is fast!</p>
+<p>...and simple!</p>`)
 }
 
 func aboutHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "This site is created by Alfie Cello")
 }
 func contactHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, `Call me right away.
-					My Numb is +62812809319xxxx`)
+	fmt.Fprintf(w, `<p>Call me!
+My Numb is <strong>+62812809319xxxx</strong></p>`)
 }
 
 func main() {
