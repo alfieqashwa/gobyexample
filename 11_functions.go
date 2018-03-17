@@ -26,6 +26,8 @@ func main() {
 	res = plusPlus(4, 5, 9)
 	fmt.Println("4+5+9 =", res)
 	// see the "=", not ":=" Why??, i don't know yet.
+	// Now I know why. Because i usedd the same variable, which is var res.
+	// If I create new var, let say, result := plusPlus(4,5,9) that works!
 	//The error msg: """./functions.go:26: no new variables on left side of :="""
 }
 
