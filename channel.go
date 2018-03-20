@@ -38,4 +38,9 @@ Running this code produces the following listing.
 
 8 6 7 5 3 0 9 -1 End of main
 
+=== SYNTAX ===
+
+ch <- v		// Send v to channel ch.
+v := <- ch	// Receive from ch, and assign value to v.
+
 */
