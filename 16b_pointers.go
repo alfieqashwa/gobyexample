@@ -21,3 +21,5 @@ func main() {
 	fmt.Println("numberB (value)	:", *numberB)
 	fmt.Println("numberB (address)	:", numberB)
 }
+
+// Pointers are a way of sharing data across functions and goroutines.
