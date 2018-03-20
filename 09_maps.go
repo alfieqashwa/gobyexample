@@ -49,4 +49,17 @@ map: map[k1:7]
 prs: false
 map: map[foo:1 bar:2]
 
+=== SYNTAX ===
+
+Var map bisa di-inisiasi dengan tanpa nilai awal, caranya menggunakan tanda kurung kurawal.
+Contoh: map[string]int{} . Atau bisa juga dengan menggunakan keyword make dan new.
+Contohnya bisa dilihat pada kode berikut:
+
+var chicken3 = map[string]int{}
+var chicken4 = make(map[string]int)
+var chicken5 = new(map[string]int)
+
+Khusus inisiasi data menggunakan keyword new, yang dihasilkan adalah data pointer.
+Untuk mengambil nilai aslinya bisa dengan menggunakan tanda asterisk(*).
+
 */
