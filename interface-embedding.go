@@ -1,6 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+type EmployeeOperation interface {
+	SalaryCalculator
+	LeaveCalculator
+}
 
 type SalaryCalculator interface {
 	DisplaySalary()
@@ -10,22 +17,13 @@ type LeaveCalculator interface {
 	CalculateLeavesLeft() int
 }
 
-type EmployeeOperations interface {
-	SalaryCalculator
-	LeaveCalculator
-}
-
 type Employee struct {
-	fname       string
-	lname       string
-	basicpay    int
-	pf          int
-	totalLeaves int
-	leavesTaken int
+	fname, lname                           string
+	basicPay, pf, totalLeaves, leavesTaken int
 }
 
 func (e Employee) DisplaySalary() {
-	fmt.Printf("%s %s has salary $%d\n", e.fname, e.lname, (e.basicpay + e.pf))
+	fmt.Printf("%s %s has salary $%d", e.fname, e.lname, (e.basicPay + e.pf))
 }
 
 func (e Employee) CalculateLeavesLeft() int {
@@ -36,13 +34,12 @@ func main() {
 	e := Employee{
 		fname:       "Alfie",
 		lname:       "Qashwa",
-		basicpay:    5000,
-		pf:          200,
+		basicPay:    7000,
+		pf:          3000,
 		totalLeaves: 30,
 		leavesTaken: 5,
 	}
-	var empOp EmployeeOperations = e
+	var empOp EmployeeOperation = e
 	empOp.DisplaySalary()
-
 	fmt.Println("\nLeaves left =", empOp.CalculateLeavesLeft())
 }
